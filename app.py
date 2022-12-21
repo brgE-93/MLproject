@@ -13,7 +13,7 @@ def home():
     return render_template('home.html')
 #send a request to our app
 
-#voir si faut ajouter transfromer au pickle
+#voir si faut ajouter transformer au pickle
 
 #def model_final(model=Lr_model,X=np.asarray([1,2,3,4,5,6,7,8,9,10]),threshold=0):
    # zz=model.decision_function(X)> threshold
