@@ -1,3 +1,49 @@
- <h1>
-    hello 
- </h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Heart Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="age" placeholder="age" required="required" /><br>
+    	<input type="text" name="sex" placeholder="sex" required="required" /><br>
+        <input type="text" name="chest_pain_type" placeholder="chest_pain_type" required="required" /><br>
+        <input type="text" name="resting_blood_pressure" placeholder="resting_blood_pressure" required="required" /><br>
+        <input type="text" name="serum_cholestoral_in_mg/dl" placeholder="serum_cholestoral_in_mg/dl" required="required" /><br>
+        <input type="text" name="fasting_blood_sugar_>_120_mg/dl" placeholder="fasting_blood_sugar_>_120_mg/dl" required="required" /><br>
+        <input type="text" name="resting_electrocardiographic_results__(values_0,1,2)" placeholder="resting_electrocardiographic_results__(values_0,1,2)" required="required" /><br>
+        <input type="text" name="maximum_heart_rate_achieved" placeholder="maximum_heart_rate_achieved" required="required" /><br>
+        <input type="text" name="exercise_induced_angina" placeholder="exercise_induced_angina" required="required" /><br>
+        <input type="text" name="oldpeak" placeholder="oldpeak" required="required" /><br>
+        <input type="text" name="the_slope_of_the_peak_exercise_ST_segment" placeholder="the_slope_of_the_peak_exercise_ST_segment" required="required" /><br>
+        <input type="text" name="number_of_major_vessels_(0-3)_colored_by_flourosopy" placeholder="number_of_major_vessels_(0-3)_colored_by_flourosopy" required="required" /><br>
+        <input type="text" name="thal_3_=_normal_6_=_fixed_defect_7_=_reversable_defect" placeholder="thal_3_=_normal_6_=_fixed_defect_7_=_reversable_defect" required="required" /><br>
+    
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
